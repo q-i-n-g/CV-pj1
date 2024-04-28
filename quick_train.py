@@ -1,6 +1,5 @@
 import load_data
 import model
-import matplotlib.pyplot as plt
 import os
 
 X_train, y_train = load_data.load_mnist('./data', kind='train')
