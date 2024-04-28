@@ -8,7 +8,7 @@ X_valid, y_valid = X_train[:10000], y_train[:10000]
 X_train, y_train = X_train[10000:], y_train[10000:]
 X_test, y_test = load_data.load_mnist('./data', kind='t10k')
 
-os.makedirs('./output/figure5', exist_ok=True)
+os.makedirs('./output/figure', exist_ok=True)
 
 
 def best_lr(lrs=[0.5, 0.2, 0.1, 0.05, 0.01, 0.001], epoch=15):
@@ -26,7 +26,7 @@ def best_lr(lrs=[0.5, 0.2, 0.1, 0.05, 0.01, 0.001], epoch=15):
     plt.xlabel('learning rate')
     plt.ylabel('test_accuracy')
     plt.xticks(x, lrs)
-    plt.savefig('./output/figure5/lr_accuracy.png')
+    plt.savefig('./output/figure/lr_accuracy.png')
     return lrs[accs.index(max(accs))]
 
 
@@ -46,7 +46,7 @@ def best_lambda(lr=0.05, lambdas=[1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 0], epoch=
     plt.xlabel('lambda')
     plt.ylabel('test_accuracy')
     plt.xticks(x, lambdas)
-    plt.savefig('./output/figure5/lambda_accuracy.png')
+    plt.savefig('./output/figure/lambda_accuracy.png')
 
     return lambdas[accs.index(max(accs))]
 
@@ -70,7 +70,7 @@ def different_hidden_layer(lr=0.05, lambda_=0, hidden_layers=[512, 256, 128, 64,
     plt.xlabel('hidden dim')
     plt.ylabel('test_accuracy')
     plt.xticks(x, hidden_layers)
-    plt.savefig('./output/figure5/hidden' + str(i) + '_accuracy' + '.png')
+    plt.savefig('./output/figure/hidden' + str(i) + '_accuracy' + '.png')
 
     return hidden_layers[accs.index(max(accs))]
 
