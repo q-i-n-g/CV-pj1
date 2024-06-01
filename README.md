@@ -3,7 +3,7 @@
 ## 数据准备
 到https://github.com/zalandoresearch/fashion-mnist 下载数据集，并在根目录下创立data文件夹，将数据集下载到data中。
 ## 测试
-到https://drive.google.com/file/d/1nDVn9Q_caX8BZOB-ED1zq0Fr9kYHCh-p/view?usp=sharing 下载模型权重，在根目录下新建output/final_model文件夹，将.pth文件放入其中，运行test.py文件即可完成对final model的测试。
+下载模型权重，在根目录下新建output/final_model文件夹，将.pth文件放入其中，运行test.py文件即可完成对final model的测试。
 
 修改路径后可以运行test.py完成任何模型测试。
 ## 训练
